@@ -1,0 +1,11 @@
+version: 0.2.0
+
+phases:
+  install:
+     runtime-versions:
+        docker: 20
+     commands:
+        -aws s3 cp s3://${mydemoprojectsid}/Car-Sale-Management -System-Main .
+        -unzip Car-Sale-Management-System-Main -d .
+build:
+   commands:
